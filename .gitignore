@@ -1,8 +1,8 @@
 *.iml
-*.xml
 *.class
 *.jar
 *.lst
 *.txt
 /*/target/*
 /.idea/dataSources/341b99c3-3a73-4d71-b2b5-b9760ea1ac50/storage_v2/_src_/schema/information_schema.FNRwLQ.meta
+/.idea/*

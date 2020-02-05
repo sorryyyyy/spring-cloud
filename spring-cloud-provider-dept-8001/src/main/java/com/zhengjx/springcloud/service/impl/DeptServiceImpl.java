@@ -10,14 +10,14 @@ import java.util.List;
 
 /**
  *     dept Service实现类
- * @author  zhengjx
+ * @author  com.zhengjx
  * @date 2020/2/3 15:22
  */
 @Service
 public class DeptServiceImpl implements DeptService {
 
     @Autowired
-    DeptDao deptDao;
+    private DeptDao deptDao;
 
     @Override
     public boolean addDept(DeptEntity deptEntity) {

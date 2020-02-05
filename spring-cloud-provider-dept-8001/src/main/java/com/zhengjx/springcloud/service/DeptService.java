@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  *     dept service接口
- * @author  zhengjx
+ * @author  com.zhengjx
  * @date 2020/2/3 15:20
  */
 public interface DeptService {

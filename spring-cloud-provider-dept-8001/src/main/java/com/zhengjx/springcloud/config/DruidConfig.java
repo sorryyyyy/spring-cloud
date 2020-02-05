@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  *     druid配置类
- * @author  zhengjx
+ * @author  com.zhengjx
  * @date 2020/2/3 15:18
  */
 @Configuration

@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  *     消费者config配置类
- * @author  zhengjx
+ * @author  com.zhengjx
  * @date 2020/2/4 13:11
  */
 @Configuration

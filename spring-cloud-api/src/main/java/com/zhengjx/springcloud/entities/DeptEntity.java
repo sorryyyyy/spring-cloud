@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *     部门实体类
- * @author  zhengjx
+ * @author  com.zhengjx
  * @date 2020/2/3 12:26
  */
 @AllArgsConstructor

@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  *     部门dao接口
- * @author  zhengjx
+ * @author  com.zhengjx
  * @date 2020/2/3 13:37
  */
 @Mapper

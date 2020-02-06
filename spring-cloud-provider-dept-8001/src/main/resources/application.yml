@@ -54,7 +54,7 @@ eureka:
     prefer-ip-address: true
 info:
   app.name: springcloud-dept
-  company.name: www.com.zhengjx.com
+  company.name: www.zhengjx.com
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}
 

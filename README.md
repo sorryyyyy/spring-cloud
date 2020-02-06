@@ -133,6 +133,40 @@ CAP:
 
 问题：当master节点由于网络故障，与其他节点失去联系，剩余节点重新进行leader选举。问题在于，选举leader的时间太长，且选举期间zk集群不可用，导致注册服务瘫痪。
 
+### Ribbon
 
+Spring Cloud Ribbon是基于Netflix Ribbon 实现的一套客户端  负载均衡的工具。
+
+简单的说，Ribbon是Netflix发布的开源项目，主要功能是**提供客户端的软件负载均衡算法**，将NetFlix的中间层服务连接在一起。Ribbon科幻段组件提供一系列完善的配置项如连接超时,重试等.简单地说,就是在配置文件中列出Load Balance（简称LB）后面的机器，Ribbon会自动的帮助你基于某种规则（如简单轮转，随机连接等）去连接这些机器。我们也很容易使用Ribbon实现自定义的负载均衡算法。
+
+#### Ribbon核心组件IRule
+
+**IRule**：根据特定算法中从服务列表中选取一个要访问的服务
+
+Ribbon采用的负载均衡算法：
+
+- RoundRobinRule  轮询：默认
+
+- RandomRule  随机
+
+- AvailabilityFilteringRule 
+
+  会先过滤掉由于多次访问故障而处于断路器跳闸状态的服务、还有并发的连接数量超过阈值的服务，然后对剩余的服务列表按照轮询策略进行访问
+
+- WeightedResponseTimeRule
+
+  根据平均响应时间计算所有服务的权重，响应时间越快的服务权重越大，选中的概率越高。刚启动时如果统计信息不足，则上有RoundRobinRule策略，等统计信息足够，会切换到WeightedResponseTimeRule
+
+- RetryRule
+
+  先按RoundRobinRule轮询算法获取服务，如果失败则在指定时间内进行重试
+
+- BestAvailableRule
+
+  会先过滤掉由于多次访问故障而处于断路器跳闸状态的服务，然后选择一个并发量最小的服务
+
+- ZoneAvoidanceRule
+
+  默认规则，复合判断Server所在区域的性能和Server的可用性选择服务
 
 

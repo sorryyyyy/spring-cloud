@@ -16,6 +16,7 @@
 		<module>spring-cloud-erueka-7003</module>
 		<module>spring-cloud-provider-dept-8002</module>
 		<module>spring-cloud-provider-dept-8003</module>
+		<module>spring-cloud-consumer-dept-feign</module>
 	</modules>
 	<packaging>pom</packaging>
 	

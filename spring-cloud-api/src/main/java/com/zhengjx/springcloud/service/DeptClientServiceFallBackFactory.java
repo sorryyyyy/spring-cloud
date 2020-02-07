@@ -27,7 +27,7 @@ public class DeptClientServiceFallBackFactory implements FallbackFactory<DeptCli
             @Override
             public DeptEntity findById(Long deptNo) {
                 return new DeptEntity().setDeptNo(deptNo)
-                        .setDeptName("该："+deptNo+"没有对应的信息，Consumer客户端提供的降级信息，此刻服务provider已经关闭")
+                        .setDeptName("该id："+deptNo+"没有对应的信息，Consumer客户端提供的降级信息，此刻服务provider已经关闭")
                         .setDbSource("没有这个数据库");
             }
 

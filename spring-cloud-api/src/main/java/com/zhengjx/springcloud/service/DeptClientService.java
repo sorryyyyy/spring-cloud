@@ -26,4 +26,7 @@ public interface DeptClientService {
 
     @RequestMapping(value = "/dept/findAll",method = RequestMethod.GET)
     public List findAll();
+
+    @RequestMapping(value = "/dept/updateByDeptNo/{deptNo}/{deptName}",method = RequestMethod.GET)
+    public boolean updateByDeptNo(@PathVariable("deptName") String deptName,@PathVariable("deptNo") Long deptNo);
 }

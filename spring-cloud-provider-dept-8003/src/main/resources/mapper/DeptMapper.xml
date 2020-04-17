@@ -13,5 +13,9 @@
 	<insert id="addDept">
         INSERT INTO dept(dept_name,db_source) VALUE (#{deptName},DATABASE());
     </insert>
+	
+	<update id="updateByDeptNo" >
+		UPDATE dept SET dept_name = #{deptName} WHERE   dept_no = #{deptNo}
+	</update>
 
 </mapper>

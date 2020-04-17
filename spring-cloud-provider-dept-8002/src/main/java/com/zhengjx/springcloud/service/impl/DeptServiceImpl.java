@@ -33,4 +33,14 @@ public class DeptServiceImpl implements DeptService {
     public List<DeptEntity> findAll() {
         return deptDao.findAll();
     }
+
+    /**
+     * 根据部门id更新部门名称
+     *
+     * @param deptNo
+     */
+    @Override
+    public boolean updateByDeptNo(String deptName,Long deptNo) {
+        return deptDao.updateByDeptNo(deptName,deptNo);
+    }
 }

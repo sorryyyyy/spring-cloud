@@ -37,4 +37,10 @@ public class DeptController_Consumer {
         return  deptClientService.findAll();
     }
 
+    @RequestMapping(value = "/consumer/dept/updateByDeptNo/{deptNo}/{deptName}")
+    public boolean updateByDeptNo(@PathVariable("deptNo") Long deptNo,@PathVariable("deptName") String deptName){
+        //三个参数：url,requestMap ResponseBean.class
+        return  deptClientService.updateByDeptNo(deptName,deptNo);
+    }
+
 }

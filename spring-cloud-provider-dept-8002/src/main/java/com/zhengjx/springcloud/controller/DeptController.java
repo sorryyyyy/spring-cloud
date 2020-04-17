@@ -39,6 +39,11 @@ public class DeptController {
         return deptService.findAll();
     }
 
+
+    @RequestMapping(value = "/dept/updateByDeptNo/{deptNo}/{deptName}",method = RequestMethod.GET)
+    public boolean updateByDeptNo(@PathVariable("deptNo") Long deptNo,@PathVariable("deptName") String deptName) {
+        return deptService.updateByDeptNo(deptName,deptNo);
+    }
     /**
      * 增加自己服务描述的接口
      * @return 输出服务描述

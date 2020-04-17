@@ -2,6 +2,7 @@ package com.zhengjx.springcloud.dao;
 
 import com.zhengjx.springcloud.entities.DeptEntity;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -32,5 +33,12 @@ public interface DeptDao {
      * @return 部门数据list
      */
     List<DeptEntity> findAll();
+
+    /**
+     * 更新
+     * @param deptNo 部门编码
+     */
+    boolean updateByDeptNo(@Param("deptName") String deptName, @Param("deptNo")Long  deptNo);
+
 
 }

@@ -35,6 +35,11 @@ public class DeptClientServiceFallBackFactory implements FallbackFactory<DeptCli
             public List findAll() {
                 return null;
             }
+
+            @Override
+            public boolean updateByDeptNo(String deptName,Long deptNo ) {
+                return false;
+            }
         };
     }
 }

@@ -32,4 +32,10 @@ public interface DeptService {
      */
     List<DeptEntity> findAll();
 
+    /**
+     * 根据部门id更新部门名称
+     * @param deptNo
+     */
+    boolean updateByDeptNo(String deptName,Long deptNo);
+
 }

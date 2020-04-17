@@ -18,7 +18,8 @@ import java.util.List;
 public class DeptController_Consumer {
 
     @Autowired
-    private DeptClientService deptClientService;//Feign面向接口编程
+    //Feign面向接口编程
+    private DeptClientService deptClientService;
 
     @RequestMapping(value = "/consumer/dept/add")
     public boolean add(DeptEntity deptEntity){

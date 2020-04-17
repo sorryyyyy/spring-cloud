@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 修改api工程模块，根据已有的DeptClientService接口新建一个实现了FallbackFactory接口的
  * 类DeptClientServiceFallBackFactory
- * fallbackFactory：集成Hystrix服务降级，还要记得在depte-feign模块 yml开启hystrix（因为fallbackFactory是在注解@FeignClient使用的）
+ * fallbackFactory：集成Hystrix服务降级，还要记得在dept-feign模块 yml开启hystrix（因为fallbackFactory是在注解@FeignClient使用的）
  * @author  zhengjx
  * @date 2020/2/6 16:04
  */

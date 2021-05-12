@@ -9,7 +9,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	
-	<artifactId>springcloud-provider-dept-8001</artifactId>
+	<artifactId>spring-cloud-provider-dept-8001</artifactId>
 	
 	<dependencies>
 		<dependency>
